@@ -7,10 +7,15 @@ from HW04 import git_reader
 class TestGit(unittest.TestCase):
     def test1(self):
         self.assertEqual(git_reader("richkempinski"),
-                         {'hellogitworld': 30, 'helloworld': 6, 'Mocks': 10, 'Project1': 2, 'threads-of-life': 1})
+                         ['Repo: hellogitworld Number of commits: 30',
+                          'Repo: helloworld Number of commits: 6',
+                          'Repo: Mocks Number of commits: 10',
+                          'Repo: Project1 Number of commits: 2',
+                          'Repo: richkempinski.github.io Number of commits: 9',
+                          'Repo: threads-of-life Number of commits: 1'])
 
     def test2(self):
-        self.assertEqual(git_reader("asdfasfas"), {})
+        self.assertEqual(git_reader("asdfasfas"), [])
 
 
 if __name__ == '__main__':

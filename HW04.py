@@ -26,3 +26,5 @@ def git_reader(username):
 
     return result
 
+
+print(git_reader("richkempinski"))
